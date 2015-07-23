@@ -41,7 +41,7 @@ function onConnection(socket) {
   });
 
   socket.on('sdp', function(payload) {
-    socket.to(socket.rooms[1]).emit('sdp', payload);
+    socket.to(socket.mainRoom).emit('sdp', payload);
   });
 
   socket.on('icecandidate', function(payload) {
