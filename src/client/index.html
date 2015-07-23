@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="sketchat.js"></script>
+  <script src="painter.js"></script>
+  <script src="chat.js"></script>
+  <script src="media.js"></script>
+  <script src="player.js"></script>
+  <script src="signaling.js"></script>
+  <script src="webrtc.js"></script>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main-panel">
+        <video id="localPlayer" autoplay="true" width="240" height="200"></video>
+        <video id="remotePlayer" autoplay="true" width="240" height="200"></video>
+        <canvas id="canvas" width="3000" height="3000"></canvas>
+    </div>
+    <div class="side-panel">
+        <input id="chat-input" type="text">
+        <div id="chat-container">
+        </div>
+    </div>
+  </body>
+</html>

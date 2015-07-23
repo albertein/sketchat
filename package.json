@@ -1,0 +1,17 @@
+{
+  "name": "sketchat",
+  "version": "0.0.1",
+  "description": "A demo for a sketch/chat/video application for @gdl_js",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.13.1",
+    "socket.io": "~1.3.6",
+    "freeice": "~2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alberto Avila <albertoavila@gmail.com>",
+  "license": "ISC"
+}

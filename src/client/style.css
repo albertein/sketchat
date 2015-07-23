@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+}
+
+.main-panel {
+  width: 80%;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.side-panel {
+  width: 20%;
+  height: 100%;
+  overflow-y: scroll;
+  float: left;
+}
+
+video {
+  float: left;
+}
+
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}
+
+.chat-container {
+  width: 100%;
+}
+
+#chat-input {
+  width: 100%;
+}
