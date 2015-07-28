@@ -20,7 +20,7 @@
       this.socket.on('ice', resolve);
     }.bind(this));
     this.connectPromise.then(function() {
-      this.socket.emit('iceRequest')
+      this.socket.emit('icerequest')
     }.bind(this));
   };
 
