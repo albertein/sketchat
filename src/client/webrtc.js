@@ -18,7 +18,7 @@
       this.connection.onicecandidate = this.onIceCandidate.bind(this);
       this.media.getStream().then(function(stream) {
         this.connection.addStream(stream);
-        this.signaling.connect();
+        this.signaling.join();
       }.bind(this)); 
     }.bind(this));
 

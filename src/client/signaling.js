@@ -11,7 +11,7 @@
     this.initIce();
   };
 
-  Signaling.prototype.connect = function() {
+  Signaling.prototype.join = function() {
     this.emit('join', this.room);
   }
 
