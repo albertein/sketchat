@@ -12,7 +12,14 @@
       }
     }.bind(this));
     this.singaling.register('chat', this.addMessage.bind(this));
+    this.singaling.register('connectionreset', this.clear.bind(this));
   }
+
+  Chat.prototype.clear = function clear() {
+    while (this.container.firstChild) {
+      this.container.removeChild(this.container.firstChild);
+    }
+  };
 
   Chat.prototype.onInput = function onInput() {
     this.addMessage(this.input.value);

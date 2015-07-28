@@ -38,9 +38,9 @@ function onConnection(socket) {
     if (!socket.room) {
       return;
     }
-    var room = rooms[socket.room];
-    room.splice(room.indexOf(socket), 1); // Remove peer
-    socket.to(socket.room).emit('peerdisconnected');
+    // When a peer disconects we kick the remaining peer (if any) and ask them to reset the connection
+    rooms[socket.room] = [];
+    socket.to(socket.room).emit('connectionreset');
   });
 
   socket.on('icerequest', function() {

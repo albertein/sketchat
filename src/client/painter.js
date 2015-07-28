@@ -10,7 +10,12 @@
     this.canvas.addEventListener('mouseup', this.onEndDraw.bind(this));
 
     this.signaling.register('draw', this.drawSegment.bind(this));
+    this.signaling.register('connectionreset', this.clear.bind(this));
   }
+
+  Painter.prototype.clear = function clear() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  };
 
   Painter.prototype.pointFromEvent = function pointFromEvent(evt) {
     return {
