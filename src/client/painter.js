@@ -1,6 +1,9 @@
 "use strict";
 
 (function(){
+
+  var SEGMEND_WIDTH = 3;
+
   function Painter(idCanvas, signaling) {
     this.canvas = document.getElementById(idCanvas);
     this.signaling = signaling;
@@ -54,6 +57,8 @@
 
   Painter.prototype.drawSegment = function(segment) {
     this.ctx.beginPath();
+    this.ctx.lineWidth = SEGMEND_WIDTH;
+    this.ctx.lineCap = "round";
     this.ctx.moveTo(segment.start.x, segment.start.y);
     this.ctx.lineTo(segment.end.x, segment.end.y);
     this.ctx.stroke();
