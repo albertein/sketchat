@@ -4,6 +4,8 @@
   
   var sketchat = window.sketchat;
   var RTCPeerConnection = window.RTCPeerConnection || window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+  var RTCSessionDescription = window.RTCSessionDescription || window.webkitRTCSessionDescription || window.mozRTCSessionDescription;
+  var RTCIceCandidate = window.RTCIceCandidate || window.webkitRTCIceCandidate || window.mozRTCIceCandidate;
 
   function WebRTC(media, signaling, errorLogger) {
     this.signaling = signaling;
