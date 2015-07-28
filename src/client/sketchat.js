@@ -27,7 +27,7 @@
 
   function onError() {
     console.log(arguments);
-    alert('Whoops, something went wrong');
+    alert('Whoops, something went wrong, check the console for details');
   }
 
   document.addEventListener('DOMContentLoaded', init);
